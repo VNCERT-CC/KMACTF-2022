@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "docx-templates": "^4.8.2",
+    "ws": "^8.4.2"
+  }
+}

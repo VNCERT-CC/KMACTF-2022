@@ -1,0 +1,52 @@
+
+<div id="myModal" class="modal" style="padding-top: 20px;">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <h2>{{name}}</h2>
+      <p><strong>{{content}}</strong></p>
+      
+      <div style=" text-align: center; ">
+        <img style=" max-width: 400px; " v-bind:src="image">
+      </div>
+      <p style=" text-align: center; "><strong>{{secret}}</strong></p>
+    </div>
+</div>
+<div>
+    <div id="myModal2" class="modal" style="padding-top: 20px;">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <h2>{{notify}}</h2>
+        </div>
+      </div>
+    </div>
+    <div><button v-on:click="back" style="border: 0px;position: fixed;bottom: 0px;right: 0px;width: 100px;height: 50px;"> 🔙 Back</button></div>
+    <div>
+    <fieldset>
+        <legend style=" padding: 0px 20px; ">Store</legend>
+    <div style="display: flex;flex-wrap: wrap;">
+        <template v-for="item in items">
+            <div style="display: flex;flex-direction: column;margin: 5px 25px;border: 1px solid;padding: 0px 20px;">
+                <div style="text-align: center;">{{item.name}}</div>
+                <div style="     height: 150px; " ><img style="max-width: 100px;" v-bind:src="item.image"></div>
+                <div style="text-align: center;">{{item.price}}💲</div>
+                <div><button v-on:click="buy(item.id)" style="width: 100%;">Buy</button></div>
+            </div>
+        </template>
+    </div>
+</fieldset>
+<hr>
+    <fieldset>
+        <legend style=" padding: 0px 20px; ">My item</legend>
+    <div style="display: flex;flex-wrap: wrap;">
+        <template v-for="item in my_items">
+            <div style="display: flex;flex-direction: column;margin: 5px 25px;border: 1px solid;padding: 0px 20px;">
+                <div style="text-align: center;">{{item.name}}</div>
+                <div style="     height: 150px; " ><img style="max-width: 100px;" v-bind:src="item.image"></div>
+                <div style="text-align: center;">{{item.price}}</div>
+                <div><button v-on:click="view(item.id)" style="width: 100%;">View</button></div>
+            </div>
+        </template>
+    </div>
+</fieldset>
+</div>

@@ -1,0 +1,11 @@
+Hello, nginx-nodejs works! This is index.html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.min.js"
+  integrity="sha512-Jq1JnVXlkYQOYQpz31qIV/0l67d97J9I6sbILtfiSYX00Isr2zK7XDRmHW8d2iBTwNZfL7sHkHGT0EzLs90jdw=="
+  crossorigin="anonymous"></script>
+<script>
+  const socket = io()
+  socket.on('message', d => console.log('Message:', d))
+  setTimeout(() => {
+    socket.emit('message', 'Hello from client')
+  }, 2000)
+</script>
